@@ -88,13 +88,21 @@
       <option value="MTN">MTN</option>
       <option value="Vodafone">Vodafone</option>
     </select>
+    
+    <label for="transaction">Transaction ID / Reference:</label>
+    <input type="text" name="transaction" id="transaction" placeholder="Enter mobile money or crypto ref ID" />
 
+    <label for="payer_name">Payer Name (as used in payment):</label>
+    <input type="text" name="payer_name" id="payer_name" placeholder="Name used in payment" />
+
+    <label for="amount">Amount Paid:</label>
+    <input type="text" name="amount" id="amount" placeholder="e.g., $10 or GH₵120" />
+    
     <div id="paymentDetails" style="margin-top: 10px; background: #f1f1f1; padding: 10px; border-radius: 5px; display: none;">
       <strong>Payment Details:</strong>
       <p id="paymentInfo">Please select a payment method</p>
     </div>
-
-
+    
     <button type="submit">Submit</button>
 
     <div class="message" id="successMsg" style="display: none;">Details submitted successfully! You'll get a feedback once review is completed.</div>
