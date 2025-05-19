@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subscription Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    input[type="file"] {
+      padding: 3px;
+    }
+    button {
+      margin-top: 20px;
+      background: #28a745;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background: #218838;
+    }
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="https://formspree.io/f/xdkgjnrv" method="POST" enctype="multipart/form-data">
+    <h2>Subscription Form</h2>
+
+    <label for="name">Full Name:</label>
+    <input type="text" name="name" id="name" required />
+
+    <label for="email">Email Address:</label>
+    <input type="email" name="email" id="email" required />
+
+    <label for="telegram">Telegram Handle:</label>
+    <input type="text" name="telegram" id="telegram" required />
+
+    <label for="plan">Subscription Plan:</label>
+    <select name="plan" id="plan" required>
+      <option value="">-- Select a Plan --</option>
+      <option value="Weekly - $10">Weekly - $10</option>
+      <option value="Monthly - $38">Monthly - $38</option>
+    </select>
+
+    <label for="paymentMethod">Payment Method:</label>
+    <select name="paymentMethod" id="paymentMethod" required onchange="showPaymentDetails(this.value)">
+      <option value="">-- Select Payment Method --</option>
+      <option value="Crypto">Crypto</option>
+      <option value="MTN">MTN</option>
+      <option value="Vodafone">Vodafone</option>
+    </select>
+
+    <div id="paymentDetails" style="margin-top: 10px; background: #f1f1f1; padding: 10px; border-radius: 5px; display: none;">
+      <strong>Payment Details:</strong>
+      <p id="paymentInfo">Please select a payment method</p>
+    </div>
+
+    <label for="proof">Upload Screenshot of Payment:</label>
+    <input type="file" name="proof" id="proof" accept="image/*" required />
+
+    <button type="submit">Submit</button>
+
+    <div class="message" id="successMsg" style="display: none;">Details submitted successfully! You'll get a feedback once review is completed.</div>
+  </form>
+
+  <script>
+    const paymentInfo = {
+      Crypto: 'Send to wallet: 0x123ABC456DEF...',
+      MTN: 'Send to MTN number: 024XXXXXXX - Name: Gabriel',
+      Vodafone: 'Send to Vodafone number: 020XXXXXXX - Name: Gabriel'
+    };
+
+    function showPaymentDetails(method) {
+      const infoDiv = document.getElementById('paymentDetails');
+      const infoText = document.getElementById('paymentInfo');
+      if (paymentInfo[method]) {
+        infoDiv.style.display = 'block';
+        infoText.textContent = paymentInfo[method];
+      } else {
+        infoDiv.style.display = 'none';
+        infoText.textContent = '';
+      }
+    }
+
+    // Optional: Show success message after submission
+    document.querySelector("form").addEventListener("submit", function (e) {
+      const msg = document.getElementById("successMsg");
+      setTimeout(() => {
+        msg.style.display = "block";
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
