@@ -11,34 +11,6 @@
       margin: 0;
       padding: 20px;
     }
-        #site-header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: transparent;
-      z-index: 1000;
-      text-align: center;
-      padding: 20px 0;
-      transition: all 0.3s ease;
-    }
-    
-    #logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      transition: all 0.3s ease;
-    }
-    
-    .scrolled #site-header {
-      text-align: right;
-      padding: 10px 20px;
-    }
-    
-    .scrolled #logo {
-      width: 50px;
-      height: 50px;
-    }
-
     form {
       background: #fff;
       padding: 20px;
@@ -89,9 +61,6 @@
   </style>
 </head>
 <body>
-  <header id="site-header">
-  <img src="C:\Users\NAC\Pictures\Screenshots\Screenshot (590).png" alt="Site Logo" id="logo">
-  </header>
 
   <form action="https://formspree.io/f/xdkgjnrv" method="POST" enctype="multipart/form-data">
     <h2><u>KOFFIE FOREX</u></h2>
@@ -165,12 +134,6 @@
         msg.style.display = "block";
       }, 1500);
     });
-
-  window.addEventListener("scroll", function() {
-    const header = document.body;
-    header.classList.toggle("scrolled", window.scrollY > 50);
-  });
-
   </script>
 </body>
 </html>
