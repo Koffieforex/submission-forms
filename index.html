@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Koffie Forex Subscription</title>
+  <title>Koffie Forex Premium Signals | Subscription</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #4a6bff;
-      --primary-dark: #3a56cc;
-      --secondary: #00c9a7;
-      --dark: #1a1a2e;
-      --light: #f8f9fa;
-      --gray: #6c757d;
-      --success: #28a745;
-      --warning: #ffc107;
-      --danger: #dc3545;
+      --primary: #2563eb;
+      --primary-light: #3b82f6;
+      --primary-dark: #1d4ed8;
+      --secondary: #06b6d4;
+      --dark: #1e293b;
+      --light: #ffffff;
+      --gray-light: #f1f5f9;
+      --gray: #94a3b8;
+      --gray-dark: #64748b;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
     }
     
     * {
@@ -27,58 +30,74 @@
     }
     
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      background-image: radial-gradient(circle at 10% 20%, rgba(235, 245, 255, 0.8) 0%, rgba(255, 255, 255, 0) 90%);
       color: var(--dark);
       line-height: 1.6;
-      padding: 0;
-      margin: 0;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 1rem;
     }
     
     .container {
       width: 100%;
-      max-width: 650px;
-      padding: 2rem;
+      max-width: 640px;
     }
     
     .card {
-      background: white;
+      background: var(--light);
       border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(226, 232, 240, 0.6);
     }
     
     .card-header {
       background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
       color: white;
-      padding: 1.5rem 2rem;
+      padding: 1.75rem 2rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card-header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      transform: rotate(30deg);
     }
     
     .card-header h2 {
-      font-weight: 600;
-      font-size: 1.8rem;
+      font-weight: 700;
+      font-size: 1.75rem;
       margin: 0;
-      letter-spacing: 0.5px;
+      letter-spacing: -0.5px;
+      position: relative;
+    }
+    
+    .card-header p {
+      opacity: 0.9;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      font-weight: 300;
+      position: relative;
     }
     
     .card-body {
-      padding: 2rem;
+      padding: 2.5rem;
     }
     
     .form-group {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
       position: relative;
     }
     
@@ -92,108 +111,126 @@
     
     .form-control {
       width: 100%;
-      padding: 0.75rem 1rem;
+      padding: 0.875rem 1.25rem;
       font-size: 1rem;
       line-height: 1.5;
       color: var(--dark);
-      background-color: #fff;
+      background-color: var(--light);
       background-clip: padding-box;
-      border: 1px solid #ced4da;
-      border-radius: 8px;
-      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-      font-family: 'Poppins', sans-serif;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+      font-family: 'Inter', sans-serif;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
+    
+    .form-control::placeholder {
+      color: var(--gray);
+      opacity: 0.6;
     }
     
     .form-control:focus {
-      border-color: var(--primary);
+      border-color: var(--primary-light);
       outline: 0;
-      box-shadow: 0 0 0 0.2rem rgba(74, 107, 255, 0.25);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.03);
     }
     
     select.form-control {
       appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236c757d' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2364748b' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
-      background-position: right 0.75rem center;
-      background-size: 16px 12px;
+      background-position: right 1rem center;
+      background-size: 14px 12px;
+      padding-right: 2.5rem;
     }
     
     .btn {
       display: inline-block;
-      font-weight: 500;
+      font-weight: 600;
       text-align: center;
       white-space: nowrap;
       vertical-align: middle;
       user-select: none;
       border: none;
-      padding: 0.875rem 1.75rem;
+      padding: 1rem 1.75rem;
       font-size: 1rem;
       line-height: 1.5;
-      border-radius: 8px;
+      border-radius: 10px;
       transition: all 0.3s ease;
       cursor: pointer;
       width: 100%;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: white;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 600;
+      letter-spacing: 0.25px;
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+      margin-top: 0.5rem;
     }
     
     .btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(74, 107, 255, 0.3);
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.15);
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
     }
     
     .btn:active {
       transform: translateY(0);
     }
     
+    .payment-details-container {
+      margin-top: 0.5rem;
+    }
+    
     .payment-details {
-      margin-top: 1rem;
-      background: #f8f9fa;
-      padding: 1rem;
+      background: var(--gray-light);
+      padding: 1.25rem;
       border-radius: 8px;
-      border-left: 4px solid var(--primary);
+      border-left: 3px solid var(--primary);
       display: none;
-      animation: fadeIn 0.3s ease;
+      animation: fadeIn 0.25s ease-out;
     }
     
     .payment-details strong {
-      color: var(--primary);
+      color: var(--primary-dark);
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 0.5rem;
     }
     
     .payment-details p {
-      margin-top: 0.5rem;
-      color: var(--gray);
+      color: var(--dark);
       font-size: 0.9rem;
+      line-height: 1.6;
+      margin: 0;
+      white-space: pre-line;
     }
     
     .alert {
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      font-size: 0.9rem;
+      padding: 1.25rem;
+      margin-top: 1.5rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
       text-align: center;
       display: none;
-    }
-    
-    .alert-success {
-      background-color: rgba(40, 167, 69, 0.1);
-      border: 1px solid rgba(40, 167, 69, 0.2);
+      animation: fadeIn 0.3s ease;
+      background-color: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
       color: var(--success);
     }
     
+    .alert-icon {
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
+      from { opacity: 0; transform: translateY(-5px); }
       to { opacity: 1; transform: translateY(0); }
     }
     
     /* Responsive adjustments */
     @media (max-width: 768px) {
-      .container {
-        padding: 1rem;
+      .card-header {
+        padding: 1.5rem;
       }
       
       .card-header h2 {
@@ -201,7 +238,17 @@
       }
       
       .card-body {
+        padding: 1.75rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .card-body {
         padding: 1.5rem;
+      }
+      
+      .form-group {
+        margin-bottom: 1.5rem;
       }
     }
   </style>
@@ -211,29 +258,30 @@
   <div class="container">
     <div class="card">
       <div class="card-header">
-        <h2>KOFFIE FOREX</h2>
+        <h2>KOFFIE FOREX SIGNALS</h2>
+        <p>Premium Subscription Service</p>
       </div>
       <div class="card-body">
         <form action="https://formspree.io/f/xdkgjnrv" method="POST" enctype="multipart/form-data">
           <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" class="form-control" name="name" id="name" required placeholder="Enter your full name">
+            <input type="text" class="form-control" name="name" id="name" required placeholder="John Doe">
           </div>
 
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" class="form-control" name="email" id="email" required placeholder="your@email.com">
+            <input type="email" class="form-control" name="email" id="email" required placeholder="john@example.com">
           </div>
 
           <div class="form-group">
             <label for="telegram">Telegram Handle</label>
-            <input type="text" class="form-control" name="telegram" id="telegram" required placeholder="@yourtelegram">
+            <input type="text" class="form-control" name="telegram" id="telegram" required placeholder="@yourusername">
           </div>
 
           <div class="form-group">
             <label for="plan">Subscription Plan</label>
             <select class="form-control" name="plan" id="plan" required>
-              <option value="">-- Select a Plan --</option>
+              <option value="">Select your plan</option>
               <option value="Weekly - $10">Weekly - $10</option>
               <option value="Monthly - $38">Monthly - $38</option>
             </select>
@@ -242,21 +290,27 @@
           <div class="form-group">
             <label for="paymentMethod">Payment Method</label>
             <select class="form-control" name="paymentMethod" id="paymentMethod" required onchange="showPaymentDetails(this.value)">
-              <option value="">-- Select Payment Method --</option>
-              <option value="Crypto">Crypto</option>
+              <option value="">Select payment option</option>
+              <option value="Crypto">Cryptocurrency</option>
               <option value="MTN">MTN Mobile Money</option>
               <option value="Vodafone">Vodafone Cash</option>
             </select>
+            <div class="payment-details-container">
+              <div id="paymentDetails" class="payment-details">
+                <strong>PAYMENT INSTRUCTIONS</strong>
+                <p id="paymentInfo">Please select a payment method</p>
+              </div>
+            </div>
           </div>
           
           <div class="form-group">
             <label for="transaction">Transaction ID / Reference</label>
-            <input type="text" class="form-control" name="transaction" id="transaction" placeholder="Enter your payment reference ID">
+            <input type="text" class="form-control" name="transaction" id="transaction" placeholder="MM123456789 or TXID...">
           </div>
 
           <div class="form-group">
             <label for="payer_name">Payer Name</label>
-            <input type="text" class="form-control" name="payer_name" id="payer_name" placeholder="Name used for payment">
+            <input type="text" class="form-control" name="payer_name" id="payer_name" placeholder="As shown in payment">
           </div>
 
           <div class="form-group">
@@ -264,15 +318,13 @@
             <input type="text" class="form-control" name="amount" id="amount" placeholder="e.g., $10 or GH₵120">
           </div>
           
-          <div id="paymentDetails" class="payment-details">
-            <strong>Payment Instructions:</strong>
-            <p id="paymentInfo">Please select a payment method to view details</p>
-          </div>
-          
           <button type="submit" class="btn">Complete Subscription</button>
 
-          <div class="alert alert-success" id="successMsg">
-            Details submitted successfully! You'll get a feedback once review is completed.
+          <div class="alert" id="successMsg">
+            <svg class="alert-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Subscription request received! We'll contact you shortly.
           </div>
         </form>
       </div>
@@ -281,9 +333,9 @@
 
   <script>
     const paymentInfo = {
-      Crypto: 'Send to wallet: Will be available soon',
-      MTN: 'Send to MTN number: 0530400182\nName: Evans Asare',
-      Vodafone: 'Send to Vodafone number: 0201369178\nName: Gabriel Asare'
+      Crypto: 'Send to wallet: Will be available soon\n\nPlease ensure to include your Telegram handle in the payment memo/reference.',
+      MTN: 'Recipient: Evans Asare\nMTN Number: 0530400182\n\nAfter payment, please provide:\n1. Transaction ID\n2. Payer Name\n3. Amount Sent',
+      Vodafone: 'Recipient: Gabriel Asare\nVodafone Number: 0201369178\n\nAfter payment, please provide:\n1. Transaction ID\n2. Payer Name\n3. Amount Sent'
     };
 
     function showPaymentDetails(method) {
@@ -300,13 +352,22 @@
       }
     }
 
-    // Optional: Show success message after submission
+    // Show success message after submission
     document.querySelector("form").addEventListener("submit", function (e) {
+      e.preventDefault();
       const msg = document.getElementById("successMsg");
+      
+      // Simulate form submission
       setTimeout(() => {
         msg.style.display = "block";
         msg.scrollIntoView({ behavior: 'smooth' });
-      }, 1500);
+        
+        // Reset form after showing message
+        setTimeout(() => {
+          this.reset();
+          document.getElementById('paymentDetails').style.display = 'none';
+        }, 100);
+      }, 1000);
     });
   </script>
 </body>
