@@ -3,124 +3,297 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Koffieforex subscription</title>
+  <title>Koffie Forex Premium Subscription</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+    :root {
+      --primary: #4a6bff;
+      --primary-dark: #3a56cc;
+      --secondary: #00c9a7;
+      --dark: #1a1a2e;
+      --light: #f8f9fa;
+      --gray: #6c757d;
+      --success: #28a745;
+      --warning: #ffc107;
+      --danger: #dc3545;
+    }
+    
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 20px;
+      padding: 0;
     }
-    form {
-      background: #fff;
-      padding: 20px;
-      max-width: 600px;
-      margin: 0 auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    h2 {
-      text-align: center;
-      color: #333;
-    }
-    label {
-      display: block;
-      margin: 15px 0 5px;
-      font-weight: bold;
-    }
-    input, select, textarea {
+    
+    .container {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
+      max-width: 650px;
+      padding: 2rem;
     }
-    input[type="file"] {
-      padding: 3px;
+    
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    button {
-      margin-top: 20px;
-      background: #28a745;
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+    
+    .card-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
       color: white;
-      padding: 12px;
-      border: none;
-      width: 100%;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    button:hover {
-      background: #218838;
-    }
-    .message {
+      padding: 1.5rem 2rem;
       text-align: center;
-      margin-top: 20px;
-      color: green;
-      font-weight: bold;
+    }
+    
+    .card-header h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+    
+    .card-body {
+      padding: 2rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--dark);
+      font-size: 0.95rem;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--dark);
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 8px;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .form-control:focus {
+      border-color: var(--primary);
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(74, 107, 255, 0.25);
+    }
+    
+    select.form-control {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236c757d' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 16px 12px;
+    }
+    
+    .btn {
+      display: inline-block;
+      font-weight: 500;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      user-select: none;
+      border: none;
+      padding: 0.875rem 1.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(74, 107, 255, 0.3);
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+    }
+    
+    .btn:active {
+      transform: translateY(0);
+    }
+    
+    .payment-details {
+      margin-top: 1rem;
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    .payment-details strong {
+      color: var(--primary);
+    }
+    
+    .payment-details p {
+      margin-top: 0.5rem;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+    
+    .alert {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      text-align: center;
+      display: none;
+    }
+    
+    .alert-success {
+      background-color: rgba(40, 167, 69, 0.1);
+      border: 1px solid rgba(40, 167, 69, 0.2);
+      color: var(--success);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      
+      .card-header h2 {
+        font-size: 1.5rem;
+      }
+      
+      .card-body {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <form action="https://formspree.io/f/xdkgjnrv" method="POST" enctype="multipart/form-data">
-    <h2><u>KOFFIE FOREX</u></h2>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2>KOFFIE FOREX PREMIUM</h2>
+      </div>
+      <div class="card-body">
+        <form action="https://formspree.io/f/xdkgjnrv" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" name="name" id="name" required placeholder="Enter your full name">
+          </div>
 
-    <label for="name">Full Name:</label>
-    <input type="text" name="name" id="name" required />
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" name="email" id="email" required placeholder="your@email.com">
+          </div>
 
-    <label for="email">Email Address:</label>
-    <input type="email" name="email" id="email" required />
+          <div class="form-group">
+            <label for="telegram">Telegram Handle</label>
+            <input type="text" class="form-control" name="telegram" id="telegram" required placeholder="@yourtelegram">
+          </div>
 
-    <label for="telegram">Telegram Handle:</label>
-    <input type="text" name="telegram" id="telegram" required />
+          <div class="form-group">
+            <label for="plan">Subscription Plan</label>
+            <select class="form-control" name="plan" id="plan" required>
+              <option value="">-- Select a Plan --</option>
+              <option value="Weekly - $10">Weekly - $10</option>
+              <option value="Monthly - $38">Monthly - $38</option>
+            </select>
+          </div>
 
-    <label for="plan">Subscription Plan:</label>
-    <select name="plan" id="plan" required>
-      <option value="">-- Select a Plan --</option>
-      <option value="Weekly - $10">Weekly - $10</option>
-      <option value="Monthly - $38">Monthly - $38</option>
-    </select>
+          <div class="form-group">
+            <label for="paymentMethod">Payment Method</label>
+            <select class="form-control" name="paymentMethod" id="paymentMethod" required onchange="showPaymentDetails(this.value)">
+              <option value="">-- Select Payment Method --</option>
+              <option value="Crypto">Crypto</option>
+              <option value="MTN">MTN Mobile Money</option>
+              <option value="Vodafone">Vodafone Cash</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="transaction">Transaction ID / Reference</label>
+            <input type="text" class="form-control" name="transaction" id="transaction" placeholder="Enter your payment reference ID">
+          </div>
 
-    <label for="paymentMethod">Payment Method(View details below):</label>
-    <select name="paymentMethod" id="paymentMethod" required onchange="showPaymentDetails(this.value)">
-      <option value="">-- Select Payment Method --</option>
-      <option value="Crypto">Crypto</option>
-      <option value="MTN">MTN</option>
-      <option value="Vodafone">Vodafone</option>
-    </select>
-    
-    <label for="transaction">Transaction ID / Reference:</label>
-    <input type="text" name="transaction" id="transaction" placeholder="Enter mobile money or crypto ref ID" />
+          <div class="form-group">
+            <label for="payer_name">Payer Name</label>
+            <input type="text" class="form-control" name="payer_name" id="payer_name" placeholder="Name used for payment">
+          </div>
 
-    <label for="payer_name">Payer Name (as used in payment):</label>
-    <input type="text" name="payer_name" id="payer_name" placeholder="Name used in payment" />
+          <div class="form-group">
+            <label for="amount">Amount Paid</label>
+            <input type="text" class="form-control" name="amount" id="amount" placeholder="e.g., $10 or GH₵120">
+          </div>
+          
+          <div id="paymentDetails" class="payment-details">
+            <strong>Payment Instructions:</strong>
+            <p id="paymentInfo">Please select a payment method to view details</p>
+          </div>
+          
+          <button type="submit" class="btn">Complete Subscription</button>
 
-    <label for="amount">Amount Paid:</label>
-    <input type="text" name="amount" id="amount" placeholder="e.g., $10 or GH₵120" />
-    
-    <div id="paymentDetails" style="margin-top: 10px; background: #f1f1f1; padding: 10px; border-radius: 5px; display: none;">
-      <strong>Payment Details:</strong>
-      <p id="paymentInfo">Please select a payment method</p>
+          <div class="alert alert-success" id="successMsg">
+            Details submitted successfully! You'll get a feedback once review is completed.
+          </div>
+        </form>
+      </div>
     </div>
-    
-    <button type="submit">Submit</button>
-
-    <div class="message" id="successMsg" style="display: none;">Details submitted successfully! You'll get a feedback once review is completed.</div>
-  </form>
+  </div>
 
   <script>
     const paymentInfo = {
       Crypto: 'Send to wallet: Will be available soon',
-      MTN: 'Send to MTN number: 0530400182 - Name: Evans Asare',
-      Vodafone: 'Send to Vodafone number: 0201369178 - Name: Gabriel Asare'
+      MTN: 'Send to MTN number: 0530400182\nName: Evans Asare',
+      Vodafone: 'Send to Vodafone number: 0201369178\nName: Gabriel Asare'
     };
 
     function showPaymentDetails(method) {
       const infoDiv = document.getElementById('paymentDetails');
       const infoText = document.getElementById('paymentInfo');
+      
       if (paymentInfo[method]) {
         infoDiv.style.display = 'block';
-        infoText.textContent = paymentInfo[method];
+        // Preserve line breaks in the text
+        infoText.innerHTML = paymentInfo[method].replace(/\n/g, '<br>');
       } else {
         infoDiv.style.display = 'none';
         infoText.textContent = '';
@@ -132,6 +305,7 @@
       const msg = document.getElementById("successMsg");
       setTimeout(() => {
         msg.style.display = "block";
+        msg.scrollIntoView({ behavior: 'smooth' });
       }, 1500);
     });
   </script>
