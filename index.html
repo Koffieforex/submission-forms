@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Koffie Forex Premium Signals | Subscription</title>
+  <title>Koffie Forex Premium Signals | Under Maintenance</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -140,190 +140,55 @@
     
     .card-body {
       padding: 2.5rem;
-    }
-    
-    .form-group {
-      margin-bottom: 1.75rem;
-      position: relative;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: var(--dark);
-      font-size: 0.95rem;
-    }
-    
-    .form-control {
-      width: 100%;
-      padding: 0.875rem 1.25rem;
-      font-size: 1rem;
-      line-height: 1.5;
-      color: var(--dark);
-      background-color: var(--light);
-      background-clip: padding-box;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      transition: all 0.2s ease;
-      font-family: 'Inter', sans-serif;
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
-    }
-    
-    .form-control::placeholder {
-      color: var(--gray);
-      opacity: 0.6;
-    }
-    
-    .form-control:focus {
-      border-color: var(--primary-light);
-      outline: 0;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.03);
-    }
-    
-    select.form-control {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2364748b' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 1rem center;
-      background-size: 14px 12px;
-      padding-right: 2.5rem;
-    }
-    
-    .btn {
-      display: inline-block;
-      font-weight: 600;
       text-align: center;
-      white-space: nowrap;
-      vertical-align: middle;
-      user-select: none;
-      border: none;
-      padding: 1rem 1.75rem;
-      font-size: 1rem;
-      line-height: 1.5;
-      border-radius: 10px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      width: 100%;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: white;
-      letter-spacing: 0.25px;
-      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
-      margin-top: 0.5rem;
-      position: relative;
-      overflow: hidden;
+    }
+    
+    .maintenance-icon {
+      font-size: 4rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      animation: pulse 2s infinite;
     }
 
-    .btn::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        to bottom right,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0) 37%,
-        rgba(255, 255, 255, 0.8) 45%,
-        rgba(255, 255, 255, 0) 50%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      transform: translateX(-100%) rotate(30deg);
-      transition: transform 0.6s ease;
-    }
-
-    .btn:hover::after {
-      transform: translateX(100%) rotate(30deg);
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
     
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.15);
-      background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    .maintenance-message {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      color: var(--dark);
     }
     
-    .btn:active {
-      transform: translateY(0);
+    .maintenance-details {
+      color: var(--gray-dark);
+      margin-bottom: 2rem;
+      line-height: 1.7;
     }
     
-    .payment-details-container {
-      margin-top: 0.5rem;
-    }
-    
-    .payment-details {
+    .contact-info {
       background: rgba(241, 245, 249, 0.8);
       padding: 1.25rem;
       border-radius: 8px;
       border-left: 3px solid var(--primary);
-      display: none;
-      animation: fadeIn 0.25s ease-out;
-    }
-    
-    .payment-details strong {
-      color: var(--primary-dark);
-      font-size: 0.9rem;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    
-    .payment-details p {
-      color: var(--dark);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin: 0;
-      white-space: pre-line;
-    }
-
-    .crypto-fields {
-      display: none;
-      animation: fadeIn 0.3s ease-out;
-    }
-    
-    .alert {
-      padding: 1.25rem;
       margin-top: 1.5rem;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      text-align: center;
-      display: none;
-      animation: fadeIn 0.3s ease;
-      background-color: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(16, 185, 129, 0.2);
-      color: var(--success);
     }
     
-    .alert-icon {
-      margin-right: 0.5rem;
-      vertical-align: middle;
-    }
-
-    .divider {
-      display: flex;
-      align-items: center;
-      margin: 1.5rem 0;
-      color: var(--gray);
-      font-size: 0.85rem;
-    }
-
-    .divider::before,
-    .divider::after {
-      content: '';
-      flex: 1;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .divider::before {
-      margin-right: 1rem;
-    }
-
-    .divider::after {
-      margin-left: 1rem;
+    .contact-info p {
+      margin: 0;
+      color: var(--dark);
     }
     
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-5px); }
-      to { opacity: 1; transform: translateY(0); }
+    .contact-info a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .contact-info a:hover {
+      text-decoration: underline;
     }
     
     /* Responsive adjustments */
@@ -339,15 +204,19 @@
       .card-body {
         padding: 1.75rem;
       }
+      
+      .maintenance-icon {
+        font-size: 3rem;
+      }
+      
+      .maintenance-message {
+        font-size: 1.1rem;
+      }
     }
     
     @media (max-width: 480px) {
       .card-body {
         padding: 1.5rem;
-      }
-      
-      .form-group {
-        margin-bottom: 1.5rem;
       }
     }
   </style>
@@ -364,173 +233,23 @@
         <p>Premium Subscription Service</p>
       </div>
       <div class="card-body">
-        <form id="subscriptionForm" action="https://formspree.io/f/myzpnbqe" method="POST">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" class="form-control" name="name" id="name" required placeholder="John Doe">
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" class="form-control" name="email" id="email" required placeholder="john@example.com">
-          </div>
-
-          <div class="form-group">
-            <label for="telegram">Telegram Handle</label>
-            <input type="text" class="form-control" name="telegram" id="telegram" required placeholder="@yourusername">
-          </div>
-
-          <div class="form-group">
-            <label for="plan">Subscription Plan</label>
-            <select class="form-control" name="plan" id="plan" required>
-              <option value="">Select your plan</option>
-              <option value="Private Signals (lifetime) - $99">Private Signals (lifetime) - $99</option>
-              <option value="Mentorship - $50">Mentorship - $50</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="paymentMethod">Payment Method</label>
-            <select class="form-control" name="paymentMethod" id="paymentMethod" required onchange="showPaymentDetails(this.value)">
-              <option value="">Select payment option</option>
-              <option value="Crypto">Cryptocurrency</option>
-              <option value="MTN">MTN Mobile Money</option>
-              <option value="Vodafone">Vodafone Cash</option>
-            </select>
-            <div class="payment-details-container">
-              <div id="paymentDetails" class="payment-details">
-                <strong>PAYMENT INSTRUCTIONS</strong>
-                <p id="paymentInfo">Please select a payment method</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Fields for MTN/Vodafone -->
-          <div id="mobileMoneyFields">
-            <div class="form-group">
-              <label for="transaction">Transaction ID / Reference</label>
-              <input type="text" class="form-control" name="transaction" id="transaction" placeholder="MM123456789">
-            </div>
-
-            <div class="form-group">
-              <label for="payer_name">Payer Name</label>
-              <input type="text" class="form-control" name="payer_name" id="payer_name" placeholder="As shown in payment">
-            </div>
-
-            <div class="form-group">
-              <label for="amount">Amount Paid</label>
-              <input type="text" class="form-control" name="amount" id="amount" placeholder="e.g., $10 or GH₵120">
-            </div>
-          </div>
-
-          <!-- Fields for Crypto -->
-          <div id="cryptoFields" class="crypto-fields">
-            <div class="form-group">
-              <label for="cryptoAmount">Amount Sent (USD)</label>
-              <input type="text" class="form-control" name="cryptoAmount" id="cryptoAmount" placeholder="e.g., 99">
-            </div>
-
-            <div class="form-group">
-              <label for="cryptoWallet">Wallet Address Used</label>
-              <input type="text" class="form-control" name="cryptoWallet" id="cryptoWallet" placeholder="Your wallet address">
-            </div>
-
-            <div class="form-group">
-              <label for="cryptoTransaction">Transaction Hash/ID</label>
-              <input type="text" class="form-control" name="cryptoTransaction" id="cryptoTransaction" placeholder="Transaction hash">
-            </div>
-          </div>
-          
-          <button type="submit" class="btn" id="submitBtn">
-            <i class="fas fa-check-circle"></i> Complete Subscription
-          </button>
-
-          <div class="alert" id="successMsg">
-            <svg class="alert-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            Subscription request received! We'll contact you shortly.
-          </div>
-        </form>
+        <div class="maintenance-icon">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h3 class="maintenance-message">Website Under Maintenance</h3>
+        <p class="maintenance-details">
+          We're currently working on improving our website to serve you better. 
+          Our services will be back online shortly. Thank you for your patience.
+        </p>
+        
+        <div class="contact-info">
+          <p>For urgent inquiries, please contact us on Telegram: 
+            <a href="https://t.me/koffieforex" target="_blank">@koffieforex</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
 
-  <script>
-    const paymentInfo = {
-      Crypto: 'Send payment to our cryptocurrency wallet:\n\nUSDT (TRC20): TB8Q5Xy7VQ3Hj2LpK9N6R1S4D\n\nBitcoin: bc1qxy2kgdygjrsqtzq2n0yrf2493w83\n\nEthereum: 0x71C7656EC7ab88b098defB751B7401B5f6d8976F\n\nPlease include your Telegram handle in the payment memo/reference.',
-      MTN: 'Recipient: Koffie Forex\nMTN Number: 0244123456\n\nAfter payment, please provide:\n1. Transaction ID\n2. Payer Name\n3. Amount Sent',
-      Vodafone: 'Recipient: Koffie Forex\nVodafone Number: 0201369178\n\nAfter payment, please provide:\n1. Transaction ID\n2. Payer Name\n3. Amount Sent'
-    };
-
-    function showPaymentDetails(method) {
-      const infoDiv = document.getElementById('paymentDetails');
-      const infoText = document.getElementById('paymentInfo');
-      const mobileMoneyFields = document.getElementById('mobileMoneyFields');
-      const cryptoFields = document.getElementById('cryptoFields');
-      
-      if (method === 'Crypto') {
-        infoDiv.style.display = 'block';
-        infoText.innerHTML = paymentInfo[method].replace(/\n/g, '<br>');
-        mobileMoneyFields.style.display = 'none';
-        cryptoFields.style.display = 'block';
-      } 
-      else if (method === 'MTN' || method === 'Vodafone') {
-        infoDiv.style.display = 'block';
-        infoText.innerHTML = paymentInfo[method].replace(/\n/g, '<br>');
-        mobileMoneyFields.style.display = 'block';
-        cryptoFields.style.display = 'none';
-      }
-      else {
-        infoDiv.style.display = 'none';
-        infoText.textContent = '';
-        mobileMoneyFields.style.display = 'none';
-        cryptoFields.style.display = 'none';
-      }
-    }
-
-    // Form submission handling
-    document.getElementById("subscriptionForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const form = this;
-      const submitBtn = document.getElementById('submitBtn');
-      const successMsg = document.getElementById("successMsg");
-      
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
-      submitBtn.disabled = true;
-
-      // Submit form to Formspree
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => {
-        if (response.ok) {
-          successMsg.style.display = "block";
-          successMsg.scrollIntoView({ behavior: 'smooth' });
-          form.reset();
-          document.getElementById('paymentDetails').style.display = 'none';
-        } else {
-          throw new Error('Form submission failed');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('There was a problem submitting your form. Please try again.');
-      })
-      .finally(() => {
-        submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Complete Subscription';
-        submitBtn.disabled = false;
-      });
-    });
-
-    // Initialize form
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('mobileMoneyFields').style.display = 'none';
-    });
-  </script>
 </body>
 </html>
